@@ -1,4 +1,7 @@
 using Events;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using Utils;
 using Utils.Scenes;
 using Utils.Singleton;
 
@@ -8,13 +11,13 @@ namespace Levels
     {
         private const string LevelNamePattern = "Level{0}";
 
-        private int _currentLevelIndex;
+        [Range(0,20)]
+        [SerializeField] private int _currentLevelIndex;
 
 
         private void Start()
         {
             ScenesChanger.GotoScene(string.Format(LevelNamePattern, _currentLevelIndex));
-
             EventsController.Subscribe<EventModels.Game.TargetColorNodesFilled>(this, OnTargetColorNodesFilled);
         }
 

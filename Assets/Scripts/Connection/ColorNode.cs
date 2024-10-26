@@ -19,6 +19,8 @@ namespace Connection
         public Color Color => spriteRenderer.color;
         public bool IsEmpty => isEmpty;
 
+        public Bounds Bounds => _bounds;
+
         private Bounds _bounds;
         
 

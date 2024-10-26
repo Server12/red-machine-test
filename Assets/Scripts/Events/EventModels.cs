@@ -8,17 +8,18 @@ namespace Events
         {
             public struct NodeTapped : IEvent
             {
-                
             }
 
             public struct PlayerFingerRemoved : IEvent
             {
-                
             }
 
             public struct TargetColorNodesFilled : IEvent
             {
-                
+            }
+
+            public struct GameLevelTapped : IEvent
+            {
             }
         }
     }
